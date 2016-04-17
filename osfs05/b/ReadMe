@@ -1,1 +1,4 @@
-
+#######the compile method#######
+nasm -f elf -o foo.o foo.asm
+gcc -m32 -c -o bar.o bar.c
+ld -m elf_i386 -s -o foobar foo.o bar.o
