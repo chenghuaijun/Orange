@@ -5,6 +5,7 @@
 ;                                                     Forrest Yu, 2005
 ; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
 org  0100h
 
 	jmp	LABEL_START		; Start
@@ -171,7 +172,7 @@ LABEL_FILE_LOADED:
 	lgdt	[GdtPtr]
 
 ; 关中断
-	cli                           
+	cli
 
 ; 打开地址线A20
 	in	al, 92h

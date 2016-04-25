@@ -90,5 +90,5 @@ csinit:		; “这个跳转指令强制使用刚刚初始化的结构”——<<O
 	push	0
 	popfd	; Pop top of stack into EFLAGS
 
-	hlt
+	hlt                        
 
