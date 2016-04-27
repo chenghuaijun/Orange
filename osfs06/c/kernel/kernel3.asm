@@ -176,7 +176,7 @@ hwint00:		; Interrupt routine for irq 0 (the clock).
 	
 	mov	esp, StackTop		; 切到内核栈
 
-	sti
+	sti                             ;cpu在响应中断的过程中会自动关闭中断,用sti指令人为的打开中断
 	
 	push	clock_int_msg
 	call	disp_str

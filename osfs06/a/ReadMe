@@ -3,4 +3,3 @@ make
 bochs
 
 
-为了解决bochs不及时刷新问题,main.c 文件中的kernel_main()函数中添加while(1); 语句
