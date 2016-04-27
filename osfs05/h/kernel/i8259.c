@@ -42,6 +42,7 @@ PUBLIC void init_8259A()
 
 	/* Slave  8259, OCW1.  */
 	out_byte(INT_S_CTLMASK,	0xFF);
+     
 }
 
 

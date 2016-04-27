@@ -160,6 +160,7 @@ PUBLIC void exception_handler(int vec_no,int err_code,int eip,int cs,int eflags)
 		disp_color_str("Error code:", text_color);
 		disp_int(err_code);
 	}
+	while(1);    //自己添加
 }
 
 

@@ -1,0 +1,8 @@
+make image
+make
+bochs
+
+敲击键盘,出现键盘中断
+
+为了解决bochs不及时刷新问题,再i8259.c 文件中的spurious_irq()函数中添加while(1); 语句
+再protect.c文件中的exception_handler()函数中添加while(1); 语句

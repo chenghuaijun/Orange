@@ -36,5 +36,7 @@ PUBLIC void cstart()
 	*p_gdt_base  = (u32)&gdt;
 
 	disp_str("-----\"cstart\" ends-----\n");
+	while(1);
 }
+
 

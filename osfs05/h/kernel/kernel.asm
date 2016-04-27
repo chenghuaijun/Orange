@@ -99,7 +99,7 @@ _start:
 	jmp	SELECTOR_KERNEL_CS:csinit
 csinit:		; 这个跳转指令强制使用刚刚初始化的结构
 
-	ud2
+	;ud2
 	jmp 0x40:0
 
 	;push	0

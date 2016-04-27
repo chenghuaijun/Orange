@@ -1,0 +1,7 @@
+编译运行方法:
+先make image直接把引导扇区 loader.bin kernel.bin 写入虚拟磁盘
+再用make 进行编译
+之后bochs运行虚拟机
+
+在start.c中加入while(1);  语句,因为 some emulators where they only update the screen every few milliseconds, and stop as soon as the CPU stops, so you'll never see the final screen update.
+, add "while(1);" after the disp_str statements in start.c.  cstart isn't supposed to return, but as there's no loop after the disp_str statements, it does return.

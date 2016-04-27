@@ -7,7 +7,8 @@
 
 
 [SECTION .data]
-disp_pos	dd	0
+
+disp_pos			dd	0
 
 [SECTION .text]
 
@@ -15,7 +16,7 @@ disp_pos	dd	0
 global	disp_str
 
 ; ========================================================================
-;                  void disp_str(char * info);
+;                  void disp_str(char * pszInfo);
 ; ========================================================================
 disp_str:
 	push	ebp

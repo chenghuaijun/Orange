@@ -1,0 +1,5 @@
+make image
+make
+bochs
+
+为了解决bochs不能及时刷新问提,再protect.c中的exception_handler函数后面加上while(1); 语句  

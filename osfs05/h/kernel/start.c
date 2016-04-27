@@ -40,6 +40,7 @@ PUBLIC void cstart()
 
 	init_prot();
 
-	disp_str("-----\"cstart\" ends-----\n");
+	disp_str("-----\"cstart\" helloends-----\n");
+//	while(1);                                   /*自己修改添加*/
 }
 
