@@ -1,0 +1,2 @@
+make image  ;;;编译
+cat snapshot.txt | sed -e 's/\([ABC]\)\./\1\n/g' | sort | grep A | wc -l  ;;;计算A字母的个数,同理计算B,C的个数,个数之比基本吻合
