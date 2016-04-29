@@ -38,7 +38,7 @@ PUBLIC void in_process(u32 key)
 
 		disable_int();
 		out_byte(CRTC_ADDR_REG, CURSOR_H);
-		out_byte(CRTC_DATA_REG, ((disp_pos/2)>>8)&0xFF);
+		out_byte(CRTC_DATA_REG, ((disp_pos/2)>>8)&0xFF);    /*visit CRT Controller Register high 8bits(First Address Register,then   															Data Register)*/
 		out_byte(CRTC_ADDR_REG, CURSOR_L);
 		out_byte(CRTC_DATA_REG, (disp_pos/2)&0xFF);
 		enable_int();
