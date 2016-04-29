@@ -18,6 +18,8 @@
 PUBLIC void keyboard_handler(int irq)
 {
 	disp_str("*");
+	in_byte(0x60);										/*读取扫描码 in al, 0x60;;; 按下2次按键产生4个星号,每次按键对应Make Code
+														  Break Code 2个中断*/
 }
 
 
