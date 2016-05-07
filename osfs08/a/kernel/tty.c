@@ -179,6 +179,7 @@ PUBLIC void tty_write(TTY* p_tty, char* buf, int len)
                               sys_printx
 *======================================================================*/
 PUBLIC int sys_printx(int _unused1, int _unused2, char* s, struct proc* p_proc)
+
 {
 	const char * p;
 	char ch;
