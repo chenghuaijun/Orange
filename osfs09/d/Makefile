@@ -17,9 +17,9 @@ CC		= gcc
 LD		= ld
 ASMBFLAGS	= -I boot/include/
 ASMKFLAGS	= -I include/ -f elf
-CFLAGS		= -I include/ -c -fno-builtin -Wall
-#CFLAGS		= -I include/ -c -fno-builtin -fno-stack-protector -fpack-struct -Wall
-LDFLAGS		= -Ttext $(ENTRYPOINT) -Map krnl.map
+ASMKFLAGS	= -I include/ -f elf
+CFLAGS		= -fno-stack-protector -m32 -I include/ -c -fno-builtin  #加入-fno-stack-protector是为了解决klib.c问题
+LDFLAGS		= -m elf_i386 -s -Ttext $(ENTRYPOINT) -Map krnl.map
 DASMFLAGS	= -D
 
 # This Program
