@@ -348,7 +348,7 @@ PRIVATE void mkfs()
 		sprintf(pde->name, "dev_tty%d", i);
 	}
 	(++pde)->inode_nr = NR_CONSOLES + 2;
-	strcpy(pde->name, "cmd.tar");
+	strcpy(pde->name, "hello:).tar");
 	WR_SECT(ROOT_DEV, sb.n_1st_sect);
 }
 

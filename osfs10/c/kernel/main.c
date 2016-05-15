@@ -209,6 +209,7 @@ void untar(const char * filename)
 			return;
 		}
 		printf("    %s (%d bytes)\n", phdr->name, f_len);
+		printf("untar is running　:) "); //add by meself
 		while (bytes_left) {
 			int iobytes = min(chunk, bytes_left);
 			read(fd, buf,
@@ -241,7 +242,7 @@ void Init()
 	printf("Init() is running ...\n");
 
 	/* extract `cmd.tar' */
-	untar("/cmd.tar");
+	untar("/hello:).tar");
 
 #if 0
 	int pid = fork();

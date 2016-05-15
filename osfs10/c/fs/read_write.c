@@ -40,8 +40,8 @@ PUBLIC int do_rdwt()
 
 	int src = fs_msg.source;		/* caller proc nr. */
 
-	assert((pcaller->filp[fd] >= &f_desc_table[0]) &&
-	       (pcaller->filp[fd] < &f_desc_table[NR_FILE_DESC]));
+     assert((pcaller->filp[fd] >= &f_desc_table[0]) &&
+		 (pcaller->filp[fd] < &f_desc_table[NR_FILE_DESC]));
 
 	if (!(pcaller->filp[fd]->fd_mode & O_RDWR))
 		return 0;

@@ -120,7 +120,7 @@ PUBLIC int do_unlink()
 	int i;
 	/* clear the first byte */
 	for (i = bit_idx % 8; (i < 8) && bits_left; i++,bits_left--) {
-		//assert((fsbuf[byte_idx % SECTOR_SIZE] >> i & 1) == 1);
+		assert((fsbuf[byte_idx % SECTOR_SIZE] >> i & 1) == 1);
 		fsbuf[byte_idx % SECTOR_SIZE] &= ~(1 << i);
 	}
 
@@ -133,7 +133,7 @@ PUBLIC int do_unlink()
 			WR_SECT(pin->i_dev, s);
 			RD_SECT(pin->i_dev, ++s);
 		}
-		//assert(fsbuf[i] == 0xFF);
+		assert(fsbuf[i] == 0xFF);
 		fsbuf[i] = 0;
 	}
 
@@ -144,7 +144,7 @@ PUBLIC int do_unlink()
 		RD_SECT(pin->i_dev, ++s);
 	}
 	unsigned char mask = ~((unsigned char)(~0) << bits_left);
-	//assert((fsbuf[i] & mask) == mask);
+	assert((fsbuf[i] & mask) == mask);
 	fsbuf[i] &= (~0) << bits_left;
 	WR_SECT(pin->i_dev, s);
 

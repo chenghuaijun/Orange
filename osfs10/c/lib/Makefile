@@ -19,7 +19,7 @@ LOBJS		=  syscall.o\
 			getpid.o \
 			fork.o exit.o wait.o
 # All Phony Targets
-.PHONY : everything final clean realclean all
+.PHONY :everything final clean realclean all
 
 # Default starting position
 everything : $(LIB)
