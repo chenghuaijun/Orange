@@ -49,6 +49,7 @@ PUBLIC void spurious_irq(int irq)
 	disp_str("spurious_irq: ");
 	disp_int(irq);
 	disp_str("\n");
+//	while(1); //add by myself
 }
 
 /*======================================================================*

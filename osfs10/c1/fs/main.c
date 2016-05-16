@@ -281,6 +281,7 @@ PRIVATE void mkfs()
 	/* make sure it'll not be overwritten by the disk log */
 	assert(INSTALL_START_SECT + INSTALL_NR_SECTS < 
 	       sb.nr_sects - NR_SECTS_FOR_LOG);
+	printl("cmd.tar not be overwritten :) haha\n"); //just for test
 	int bit_offset = INSTALL_START_SECT -
 		sb.n_1st_sect + 1; /* sect M <-> bit (M - sb.n_1stsect + 1) */
 	int bit_off_in_sect = bit_offset % (SECTOR_SIZE * 8);
@@ -348,7 +349,7 @@ PRIVATE void mkfs()
 		sprintf(pde->name, "dev_tty%d", i);
 	}
 	(++pde)->inode_nr = NR_CONSOLES + 2;
-	strcpy(pde->name, "cmd.tar");
+	strcpy(pde->name, "hello:).tar");
 	WR_SECT(ROOT_DEV, sb.n_1st_sect);
 }
 
